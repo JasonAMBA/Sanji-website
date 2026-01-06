@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+
+.footer{
+  background: linear-gradient(
+    to bottom,
+    rgba(70, 0, 30, 1) 0%,
+    rgba(172, 0, 74, 1) 100%
+  );
+  padding: 30px;
+  text-align: center;
+  font-family: var(--font-source-sans-3);
+  font-size: 22px;
+  color: $blanc;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 20px;
+    font-size: 18px;
+  }
+}

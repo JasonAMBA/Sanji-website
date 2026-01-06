@@ -1,0 +1,101 @@
+@import "../../styles/variables";
+
+.navbar {
+  background-color: $creme-pale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+
+  p {
+    font-family: var(--font-beau-rivage);
+    font-size: 40px;
+  }
+
+    // Liens affichés uniquement sur desktop
+  .links {
+    display: flex;
+    gap: 60px;
+    cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  // Bouton burger affiché uniquement en mobile
+  .burger {
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    color: brown;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  // Menu déroulant visible uniquement en mobile quand ouvert
+  .mobileMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $creme-pale;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slideDown 0.3s ease forwards;
+
+    p {
+      font-size: 30px;
+      margin: 10px;
+    }
+
+    @media screen and (min-width: 769px) {
+      display: none;
+    }
+
+    @media screen and (max-width : 425px) {
+      p {font-size: 25px;}
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .navbar{
+    gap: 30px;
+
+    .icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .logo {
+      width: 125px;
+      height: auto;
+    }
+
+    .burger {
+      font-size: 30px;
+    }
+  }
+}

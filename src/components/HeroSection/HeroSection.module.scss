@@ -1,0 +1,38 @@
+@import "../../styles/variables";
+
+.heroSection {
+  position: relative;
+
+  background-image: url("https://jasonsamaxx.s3.eu-north-1.amazonaws.com/one-piece/sanji/Foods_Infobox+1.png");
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $blanc;
+
+  p {
+    font-family: var(--font-bad-script);
+    font-size: 54px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .heroSection {
+    p {
+      font-size: 48px;
+      padding: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroSection {
+    p {
+      font-size: 40px;
+      padding: 30px;
+    }
+  }
+}
